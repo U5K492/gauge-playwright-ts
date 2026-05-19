@@ -4,6 +4,12 @@
 
 [English](README.md)
 
+## テンプレートとして使う
+
+```bash
+gauge init https://github.com/U5K492/gauge-playwright-ts
+```
+
 ## 必要な環境
 
 - Node.js 18+

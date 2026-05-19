@@ -4,6 +4,12 @@ A project template for [Gauge](https://gauge.org/) + [Playwright](https://playwr
 
 [日本語](README.ja.md)
 
+## Use as a template
+
+```bash
+gauge init https://github.com/U5K492/gauge-playwright-ts
+```
+
 ## Prerequisites
 
 - Node.js 18+
