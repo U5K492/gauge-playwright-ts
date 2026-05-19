@@ -5,14 +5,14 @@ import { PlaywrightManager } from './PlaywrightManager';
 export default class Display {
 
   @Step('GET STARTEDをクリックする')
-  public async clickTarget() {
+  public async clickGetStarted() {
     const page = await PlaywrightManager.page();
-    await page.locator('css=.getStarted_Sjon').click();
+    await page.getByRole('link', { name: 'Get started' }).first().click();
   }
 
   @Step('Installationページに遷移する')
   public async assertInstallationPage() {
     const page = await PlaywrightManager.page();
-    await expect(page).toHaveTitle('Installation | Playwright Java');
+    await expect(page).toHaveTitle('Installation | Playwright');
   }
 }
