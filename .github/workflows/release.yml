@@ -16,15 +16,19 @@ jobs:
 
       - name: Create template zip
         run: |
-          zip -r gauge-playwright-ts.zip . \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "node_modules/*" \
-            --exclude ".pnpm-store/*" \
-            --exclude "reports/*" \
-            --exclude "logs/*" \
-            --exclude ".gauge/*" \
-            --exclude "dist/*"
+          mkdir -p /tmp/template/gauge-playwright-ts
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='.pnpm-store' \
+            --exclude='reports' \
+            --exclude='logs' \
+            --exclude='.gauge' \
+            --exclude='dist' \
+            . /tmp/template/gauge-playwright-ts/
+          cd /tmp/template
+          zip -r $GITHUB_WORKSPACE/gauge-playwright-ts.zip gauge-playwright-ts/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

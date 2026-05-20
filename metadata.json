@@ -1,0 +1,7 @@
+{
+  "name": "gauge-playwright-ts",
+  "description": "Gauge template for TypeScript with Playwright",
+  "postInstallCmd": "npm install",
+  "postInstallMsg": "Run specifications with \"npm test\" in project root.",
+  "version": "1.0.0"
+}
