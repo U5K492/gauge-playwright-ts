@@ -1,12 +1,13 @@
 {
   "name": "gauge-playwright-ts",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "packageManager": "pnpm@10.26.0",
   "scripts": {
-    "test": "gauge run specs"
+    "test": "gauge run specs",
+    "postinstall": "playwright install chromium"
   },
   "dependencies": {
-    "gauge-ts": "0.1.0",
+    "gauge-ts": "^0.3.6",
     "playwright": "^1.45.0"
   },
   "devDependencies": {
